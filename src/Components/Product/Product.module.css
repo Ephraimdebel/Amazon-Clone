@@ -1,3 +1,6 @@
+.card_wraper{
+    /* padding: 5px; */
+}
 .card__container {
     height: 100%;
     width: 250px;
@@ -7,7 +10,7 @@
 .img_container{
     width: 100%;
     object-fit: contain;
-    max-height: 220px;
+    max-height: 160px;
     padding: 0px 2px;
 }
 .products_container{
@@ -32,4 +35,39 @@
     background-color: rgb(255, 165, 0);
     padding: 5px 80px;
     margin-left: 15px;
+}
+/* copy css */
+.product_container section{
+    margin: 0 auto;
+}
+
+.product__flexed{
+    box-shadow: none;
+    height: auto;
+    display: flex;
+    gap: 50px;
+    width: 100%;
+
+}
+.product__flexed h3{
+    padding: 20px 0px;
+}
+.product__flexed button{
+    display: block;
+    position: static;
+    width: 250px;
+    margin-right: 40px;
+}
+.product__flexed{
+    height: 50vh;
+}
+.product__flexed img{
+    width: 300px !important;
+    height: auto;
+}
+@media screen and (max-width: 768px){
+    .product__flexed{
+        display: flex;
+        flex-direction: column;
+    }
 }

@@ -1,9 +1,9 @@
 import React from 'react'
 
-function CurrencyFormat() {
+function CurrencyFormat({amount}) {
   return (
     <div>
-      currency format
+      ${amount}
     </div>
   )
 }

@@ -6,7 +6,7 @@ import CurrencyFormat from "../CurrencyFormat/CurrencyFormat"
 import { DataContext } from '../DataProvider/DataProvider';
 import { Type } from '../../Utility/action.type';
 
-function ProductCard({product,flex}) {
+function ProductCard({product,flex,renderAdd}) {
     const navigate = useNavigate();
     const {image,title,id,rating,price,description} = product;
     console.log("product card page",product)
@@ -14,9 +14,9 @@ function ProductCard({product,flex}) {
     const [state,dispatch] = useContext(DataContext)
 
     console.log(state)
-    const handleRoute = ()=>{
-        navigate(`/products/${id}`)
-    }
+    // const handleRoute = ()=>{
+    //     navigate(`/products/${id}`)
+    // }
     let addToCart = ()=>{
         dispatch({
             type:Type.ADD_TO_BASKET,
@@ -29,8 +29,8 @@ function ProductCard({product,flex}) {
    
 
    
-    <div onClick={handleRoute} className={`${classes.card__container} ${flex?classes.product__flexed : ""}` }>
-         <div className={classes.card_wraper}>
+    <div className={`${classes.card__container} ${flex?classes.product__flexed : ""}` }>
+         
         <Link to = {`/products/${id}`}>
             <img src={image} alt='' className={classes.img_container} />
         </Link>
@@ -42,14 +42,15 @@ function ProductCard({product,flex}) {
                 <small>{rating?.count}</small>
             </div>
             <div>
-                {/* <CurrencyFormat amount={price}/> */}
+                <CurrencyFormat amount={price}/>
             </div>
-            <button className={classes.button} onClick={addToCart}>
-                add to Cart
-            </button>
+            {
+                !(renderAdd) && <button className={classes.button} onClick={addToCart}>add to Cart</button>
+            }
+            
         </div>
     </div>
-    </div>
+    
   )
 }
 

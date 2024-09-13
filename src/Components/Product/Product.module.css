@@ -28,6 +28,7 @@
     margin-left: 15px;
 }
 .button{
+    
     font-size: 12px;
     font-weight: bold;
     border: none;
@@ -35,7 +36,9 @@
     background-color: rgb(255, 165, 0);
     padding: 5px 80px;
     margin-left: 15px;
+    /* display: none; */
 }
+
 /* copy css */
 .product_container section{
     margin: 0 auto;
@@ -59,7 +62,7 @@
     margin-right: 40px;
 }
 .product__flexed{
-    height: 50vh;
+    height: 35vh;
 }
 .product__flexed img{
     width: 300px !important;

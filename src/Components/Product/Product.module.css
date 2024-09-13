@@ -40,6 +40,9 @@
 }
 
 /* copy css */
+.products_container{
+    max-width: 1200px;
+}
 .product_container section{
     margin: 0 auto;
 }

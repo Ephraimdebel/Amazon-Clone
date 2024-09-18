@@ -26,7 +26,7 @@ function Product() {
         {results?.map((product)=>(
           <ProductCard 
           key={product.id}
-          product = {product}
+          product = {product} 
           />
         ))}
       </section>)

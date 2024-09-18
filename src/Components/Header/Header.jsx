@@ -35,6 +35,7 @@ function Header() {
             <div className={classes.search}>
                 <select name="" id="">
                     <option value="">All</option>
+                    <option value="">brand</option>
                 </select>
                 <input type="text" name='' id='' placeholder='search Amazon'/>
                 <BsSearch size={25}/>

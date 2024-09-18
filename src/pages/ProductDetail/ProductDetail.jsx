@@ -16,12 +16,12 @@ function ProductDetail() {
     //https://fakestoreapi.com/products/1
     //${ProductUrl}/products/${productId}
     setIsLoading(true)
-    axios.get(`https://fakestoreapi.com/products`)
+    axios.get(`${ProductUrl}/products/${productId}`)
     .then((res)=>{
-      let request = res.data.filter((product)=>{ return product.id == productId})
-      setProduct(request)
+      // let request = res.data.filter((product)=>{ return product.id == productId})
+      setProduct(res.data)
       setIsLoading(false)
-      console.log("the fetched one",request)
+      console.log("the fetched one",res)
     }).catch((err)=> {
       console.log(err)
     setIsLoading(false)})
@@ -30,15 +30,16 @@ function ProductDetail() {
   console.log("this is products",products)
   return (
     <>
-    {
+    {/* {
       isLoading ? (<Loader />):( products?.map((product)=>{
         return <ProductCard key={product.id}  product = {product} flex = {true}/>
        }))
-     
-
-
-    }
+    } */}
     
+    {
+      isLoading ? (<Loader />):(<ProductCard key={products.id}  product = {products} flex = {true}/>)
+      
+    }   
     </>
   )  
 }

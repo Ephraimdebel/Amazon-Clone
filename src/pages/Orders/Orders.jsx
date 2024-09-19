@@ -2,9 +2,9 @@ import React from 'react'
 
 function Orders() {
   return (
-    <div>
+    <LayOut>
       orders page
-    </div>
+    </LayOut>
   )
 }
 

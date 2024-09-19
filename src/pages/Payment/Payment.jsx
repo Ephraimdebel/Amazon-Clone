@@ -2,9 +2,9 @@ import React from 'react'
 
 function Payment() {
   return (
-    <div>
+    <LayOut>
       payment page
-    </div>
+    </LayOut>
   )
 }
 

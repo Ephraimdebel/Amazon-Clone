@@ -4,6 +4,7 @@ import axios from "axios"
 import { ProductUrl } from '../../Api/endPoints'
 import ProductCard from '../../Components/Product/ProductCard'
 import Loader from '../../Components/Loader/Loader'
+import LayOut from '../../Layout/LayOut'
 
 function ProductDetail() {
   const { productId } = useParams()
@@ -21,15 +22,15 @@ function ProductDetail() {
       // let request = res.data.filter((product)=>{ return product.id == productId})
       setProduct(res.data)
       setIsLoading(false)
-      console.log("the fetched one",res)
+      // console.log("the fetched one",res)
     }).catch((err)=> {
       console.log(err)
     setIsLoading(false)})
     
   },[])
-  console.log("this is products",products)
+  // console.log("this is products",products)
   return (
-    <>
+    <LayOut>
     {/* {
       isLoading ? (<Loader />):( products?.map((product)=>{
         return <ProductCard key={product.id}  product = {product} flex = {true}/>
@@ -40,7 +41,7 @@ function ProductDetail() {
       isLoading ? (<Loader />):(<ProductCard key={products.id}  product = {products} flex = {true}/>)
       
     }   
-    </>
+    </LayOut>
   )  
 }
 

@@ -6,8 +6,8 @@ function LayOut({children}) {
   return (
     <div>
       <Header />
-      {/* {children} */}
-      <Outlet />
+      {children}
+      {/* <Outlet /> */}
     </div>
   )
 }

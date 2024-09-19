@@ -9,7 +9,7 @@ import { Type } from '../../Utility/action.type';
 function ProductCard({product,flex,renderAdd}) {
     const navigate = useNavigate();
     const {image,title,id,rating,price,description} = product;
-    console.log("product card page",product)
+    // console.log("product card page",product)
 
     const [state,dispatch] = useContext(DataContext)
 

@@ -52,6 +52,7 @@ const decrement = (id)=>{
               )
             }
         </div>
+        
         {
           basket?.length !==0 && (
             <div className={classes.subtotal}>

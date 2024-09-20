@@ -7,12 +7,15 @@ import Loader from '../Loader/Loader'
 function Product() {
   const [results,seResults] = useState([])
   const [isLoading,setIsLoading] = useState(false)
+  // console.log("before",results)
   useEffect(()=>{
     setIsLoading(true)
     axios.get(`https://fakestoreapi.com/products`)
     .then((res)=>{
+      // console.log("the fetched data in product components",res)
       seResults(res.data)
       setIsLoading(false)
+      // console.log("after", results)
     }).catch((err)=> {
       console.log("err")
       setIsLoading(false)
@@ -26,7 +29,8 @@ function Product() {
         {results?.map((product)=>(
           <ProductCard 
           key={product.id}
-          product = {product} 
+          product = {product}
+          flex = {false} 
           />
         ))}
       </section>)

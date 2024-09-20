@@ -10,6 +10,7 @@ function Results() {
   const [results,seResults] = useState([])
   const [isLoading,setIsLoading] = useState(false)
   const {categoryName} = useParams()
+  // console.log(useParams())
   useEffect(() => {
     setIsLoading(true)
     axios.get(`${ProductUrl}/products/category/${categoryName}`)

@@ -4,6 +4,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import classes from "./Carousel.module.css"
 import {img} from "./img/data"
 
+
 function CarouselEffect() {
   return (
     <div>
@@ -18,6 +19,7 @@ function CarouselEffect() {
                 return <img src = {imglink} />
             })
         }
+       
       </Carousel>
       <div className={classes.hero__img}></div>
     </div>

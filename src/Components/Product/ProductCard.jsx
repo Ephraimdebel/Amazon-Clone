@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
-import classes from "./product.module.css"
+import classes from "./Product.module.css"
 import Rating from "@mui/material/Rating"
 import CurrencyFormat from "../CurrencyFormat/CurrencyFormat"
 import { DataContext } from '../DataProvider/DataProvider';

@@ -43,7 +43,7 @@ function Payment() {
         method :"POST",
         url:`/payment/create?total=${totalPrice*100}`
       })
-        // console.log(response.data)
+        console.log("payment page",response.data)
         const clientSecret = response.data?.clientSecret;
         const {paymentIntent} = await stripe.confirmCardPayment(
           clientSecret,

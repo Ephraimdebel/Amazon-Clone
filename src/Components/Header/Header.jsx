@@ -15,6 +15,7 @@ function Header() {
     const totalItem = basket?.reduce((amount,item)=>{
         return item.amount +amount
     },0)
+    
     console.log("here is my basket:-",basket)
   return (
     <section className={classes.fixed}>

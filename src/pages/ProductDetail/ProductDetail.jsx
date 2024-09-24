@@ -38,7 +38,7 @@ function ProductDetail() {
     } */}
     
     {
-      isLoading ? (<Loader />):(<ProductCard key={products.id}  product = {products} flex = {true}/>)
+      isLoading ? (<Loader />):(<ProductCard key={products.id}  product = {products} flex = {true} desc={true}/>)
       
     }   
     </LayOut>

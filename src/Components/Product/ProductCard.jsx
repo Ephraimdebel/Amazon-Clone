@@ -6,14 +6,14 @@ import CurrencyFormat from "../CurrencyFormat/CurrencyFormat"
 import { DataContext } from '../DataProvider/DataProvider';
 import { Type } from '../../Utility/action.type';
 
-function ProductCard({product,flex,renderAdd}) {
+function ProductCard({product,flex,renderAdd,desc}) {
     const navigate = useNavigate();
     const {image,title,id,rating,price,description} = product;
     // console.log("product card page",product)
 
     const [state,dispatch] = useContext(DataContext)
 
-    console.log(state)
+    // console.log(state)
     // const handleRoute = ()=>{
     //     navigate(`/products/${id}`)
     // }
@@ -36,11 +36,11 @@ function ProductCard({product,flex,renderAdd}) {
         </Link>
         <div>
             <h3>{title}</h3>
-            {flex && <div style={{maxWidth:"750px"}}>{description}</div>}
+            {desc && <div style={{maxWidth:"750px"}}>{description}</div>}
             <div className={classes.rating}>
                 <Rating value = {rating?.rate} precision = {0.1} />
                 <small>{rating?.count}</small>
-            </div>
+            </div> 
             <div>
                 <CurrencyFormat amount={price}/>
             </div>

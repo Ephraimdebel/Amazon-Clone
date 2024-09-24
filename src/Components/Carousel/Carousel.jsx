@@ -12,8 +12,7 @@ function CarouselEffect() {
       autoPlay = {true}
       infiniteLoop = {true}
       showIndicators = {false}
-      showThumbs = {false}
-      >
+      showThumbs = {false}      >
         {
             img.map((imglink)=>{
                 return <img src = {imglink} />

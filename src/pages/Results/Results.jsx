@@ -6,6 +6,7 @@ import ProductCard from '../../Components/Product/ProductCard'
 import { ProductUrl } from '../../Api/endPoints'
 import Loader from '../../Components/Loader/Loader'
 import LayOut from '../../Layout/LayOut'
+
 function Results() {
   const [results,seResults] = useState([])
   const [isLoading,setIsLoading] = useState(false)

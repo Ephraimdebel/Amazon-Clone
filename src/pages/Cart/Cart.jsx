@@ -41,7 +41,7 @@ const decrement = (id)=>{
                 basket?.map((item,i)=>{
                   return <section className={classes.cart_product}>
 
-                    <ProductCard key={i} product={item} flex={true} renderAdd={true}/>
+                    <ProductCard key={i} product={item} flex={true} renderAdd={true} desc={true}/>
                     <div className={classes.btn_container}>
                       <button className={classes.btn}  onClick={()=>increment(item)}><IoIosArrowUp size={20}/></button>
                       <span>{item.amount}</span>

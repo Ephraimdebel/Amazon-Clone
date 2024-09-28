@@ -1,6 +1,6 @@
 
 .card__container {
-    
+    /* height: 400px; */
     width: 250px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     padding: 10px;
@@ -59,8 +59,10 @@
     max-width: 1200px;
     margin: 100px auto 100px auto;
     gap: 50px;
-    justify-content: center;
-    place-items: center;
+    /* justify-content: center; */
+    margin-left: auto;
+    margin-right: auto;
+    /* place-items: center; */
 }
 
 
@@ -82,6 +84,8 @@
 } */
 .product_container section{
     margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .product__flexed{
@@ -112,5 +116,10 @@
     .product__flexed{
         display: flex;
         flex-direction: column;
+    }
+}
+@media (max-width: 548px){
+    .products_container{
+        place-items: center;
     }
 }

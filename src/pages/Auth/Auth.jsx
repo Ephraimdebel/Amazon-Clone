@@ -8,11 +8,12 @@ import { Type } from '../../Utility/action.type'
 import { BeatLoader, ClipLoader } from 'react-spinners'
 
 
-function Auth({msg,redirect}) {
+function Auth() {
   
   const [email,setEmail] = useState("")
   const [password,setPassword] = useState("")
   const [error,setError] = useState("")
+
   const [loading,setLoading] = useState({
     signIn:false,
     signUp:false
@@ -24,12 +25,12 @@ function Auth({msg,redirect}) {
   const navigate = useNavigate()
   const navStateData =useLocation()
 
-  console.log(navStateData)
+  // console.log(navStateData)
 
   const authHandler=async(e)=>{
 
     e.preventDefault()
-    console.log(e.target.name)
+    // console.log(e.target.name)
     if (e.target.name=="signin"){
       setLoading({...loading,signIn:true})
       signInWithEmailAndPassword(auth,email,password).then((userInfo)=>{
@@ -60,8 +61,6 @@ function Auth({msg,redirect}) {
           console.error(err);
           setError(err.message);  // Update error state with the error message from err
           setLoading({...loading,signUp:false})
-        
-
         
         })
     }

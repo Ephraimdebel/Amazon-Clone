@@ -64,7 +64,7 @@ function Payment() {
         })
         // console.log(confirmation)
         setProcessing(false)
-        navigate("/orders",{state:{mg:"you have placed new ordr"}})
+        navigate("/orders",{state:{msg:"you have placed new ordr"}})
     }catch(error){
       console.log("error ####",error)
       setProcessing(false)
@@ -112,6 +112,7 @@ function Payment() {
           <h3>Payment methods </h3>
           <div className={classes.payment__card__container}>
             <div className={classes.payment__details}>
+              
               <form onSubmit={handlePayment}>
                 {error && <small style={{color:"red"}}>{error}</small>}
                 <CardElement onChange={handleChange}/>

@@ -5,4 +5,5 @@ const axiosInstance = axios.create({
     baseURL:"https://amazon-api-deploy-2fpe.onrender.com/"
     // baseURL:"http://localhost:5000/"
 })
+
 export {axiosInstance}
